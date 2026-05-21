@@ -27,7 +27,7 @@
       
       --color-text-primary: #f8fafc;
       --color-text-secondary: #94a3b8;
-      --color-text-muted: #64748b;
+      --color-text-muted: #8290a6;
       
       --color-border: rgba(255, 255, 255, 0.06);
       --color-border-hover: rgba(255, 255, 255, 0.12);
@@ -110,6 +110,7 @@
       align-items: center;
       padding: 20px 24px;
       background: rgba(15, 23, 42, 0.45);
+      -webkit-backdrop-filter: blur(16px);
       backdrop-filter: blur(16px);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-lg);
@@ -220,6 +221,7 @@
     /* Sidebar and Navigation Panel */
     .sidebar {
       background: var(--bg-sidebar);
+      -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-lg);
@@ -362,6 +364,29 @@
       flex-shrink: 0;
       position: relative;
       z-index: 2;
+      padding: 0;
+      font: inherit;
+      outline: none;
+    }
+    .nav-item-checkbox:focus-visible,
+    .nav-item-select-btn:focus-visible {
+      outline: 2px solid var(--color-block-2);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    .nav-item-select-btn {
+      background: transparent;
+      border: none;
+      padding: 0;
+      text-align: left;
+      flex: 1;
+      min-width: 0;
+      cursor: pointer;
+      color: inherit;
+      font: inherit;
+      display: flex;
+      flex-direction: column;
+      outline: none;
     }
 
     .nav-item-checkbox:hover {
@@ -439,6 +464,7 @@
 
     .content-header-card {
       background: var(--bg-card);
+      -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-lg);
@@ -524,6 +550,7 @@
     /* Premium interactive card design */
     .card-item {
       background: var(--bg-card);
+      -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
@@ -799,6 +826,7 @@
     /* SRS Widget Styles */
     .srs-widget-card {
       background: var(--bg-card);
+      -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-lg);
@@ -949,6 +977,7 @@
       width: 100%;
       height: 100%;
       background: rgba(15, 23, 42, 0.75);
+      -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
     }
     .video-modal-content {
@@ -956,6 +985,7 @@
       width: 90%;
       max-width: 800px;
       background: rgba(30, 41, 59, 0.7);
+      -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-lg);
@@ -993,7 +1023,7 @@
       color: #f87171;
     }
     .video-modal-body {
-      padding: 24px;
+      padding: 56px 24px 24px 24px;
     }
     .video-iframe-container {
       position: relative;
@@ -1022,6 +1052,29 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    /* Accessible Text Link Buttons */
+    .text-link-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      text-decoration: underline;
+      outline: none;
+      transition: color var(--transition-fast);
+    }
+    .text-link-btn:focus-visible {
+      outline: 2px solid var(--color-block-2);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+    .text-link-btn-share {
+      color: var(--color-block-2);
+    }
+    .text-link-btn-reset {
+      color: #ef4444;
     }
   </style>
 </head>
@@ -1055,10 +1108,10 @@
           <div style="font-size: 10px; color: var(--color-text-muted); margin-top: 4px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
             <span id="progressRatio">0 из 20 тем</span>
             <div style="display: flex; gap: 10px; align-items: center;">
-              <span style="cursor: pointer; text-decoration: underline; color: var(--color-block-2);" id="shareProgressBtn" title="Скопировать ссылку с вашим прогрессом для открытия на другом устройстве">Поделиться</span>
-              <span style="cursor: pointer; text-decoration: underline;" id="exportProgressBtn" title="Экспортировать прогресс в виде кода">Экспорт</span>
-              <span style="cursor: pointer; text-decoration: underline;" id="importProgressBtn" title="Импортировать прогресс по коду">Импорт</span>
-              <span style="cursor: pointer; text-decoration: underline; color: #ef4444;" id="resetProgressBtn">Сбросить</span>
+              <button type="button" class="text-link-btn text-link-btn-share" id="shareProgressBtn" title="Скопировать ссылку с вашим прогрессом для открытия на другом устройстве">Поделиться</button>
+              <button type="button" class="text-link-btn" id="exportProgressBtn" title="Экспортировать прогресс в виде кода" style="color: inherit;">Экспорт</button>
+              <button type="button" class="text-link-btn" id="importProgressBtn" title="Импортировать прогресс по коду" style="color: inherit;">Импорт</button>
+              <button type="button" class="text-link-btn text-link-btn-reset" id="resetProgressBtn">Сбросить</button>
             </div>
           </div>
         </div>
@@ -1348,7 +1401,7 @@
 
     // Helper to encode Unicode characters in base64
     function unicodeToBase64(str) {
-      return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(match, p1) {
+      return btoa(encodeURIComponent(str).replace(/%([0-9a-fA-F]{2})/g, function(match, p1) {
         return String.fromCharCode('0x' + p1);
       }));
     }
@@ -1391,17 +1444,22 @@
     function checkUrlHashProgress() {
       try {
         const hash = window.location.hash;
-        if (hash && hash.startsWith('#progress=')) {
-          const base64Data = hash.substring(10);
-          if (base64Data) {
-            // Confirm import
-            const confirmImport = confirm("Обнаружен перенесенный прогресс обучения в ссылке.\n\nИмпортировать его? (Это заменит текущий прогресс на этом устройстве)");
-            if (confirmImport) {
-              const success = importProgressString(base64Data);
-              if (success) {
-                alert("Прогресс успешно импортирован!");
-              } else {
-                alert("Ошибка при импорте. Ссылка повреждена.");
+        if (hash) {
+          // Remove starting # and split by parameters
+          const params = hash.substring(1).split('&');
+          const progressParam = params.find(p => p.startsWith('progress='));
+          if (progressParam) {
+            const base64Data = decodeURIComponent(progressParam.substring(9));
+            if (base64Data) {
+              // Confirm import
+              const confirmImport = confirm("Обнаружен перенесенный прогресс обучения в ссылке.\n\nИмпортировать его? (Это заменит текущий прогресс на этом устройстве)");
+              if (confirmImport) {
+                const success = importProgressString(base64Data);
+                if (success) {
+                  alert("Прогресс успешно импортирован!");
+                } else {
+                  alert("Ошибка при импорте. Ссылка повреждена.");
+                }
               }
             }
           }
@@ -1528,8 +1586,8 @@
         else nextInterval = 30;
       }
       
-      const nextReviewDate = new Date();
-      nextReviewDate.setDate(now.getDate() + nextInterval);
+      const nextReviewDate = new Date(now);
+      nextReviewDate.setDate(nextReviewDate.getDate() + nextInterval);
       nextReviewDate.setHours(0, 0, 0, 0); // Due at the start of the target day
       
       srsState[id] = {
@@ -1771,35 +1829,44 @@
               const dueIndicator = isDue ? `<span class="nav-item-due-indicator" title="Требует повторения">🔴</span>` : '';
               
               return `
-                <button 
+                <div 
                   class="nav-item ${isActive}" 
                   id="nav-item-${item.id}" 
-                  onclick="selectTopic(${item.id})"
                   style="--badge-accent: ${color};"
                 >
                   <div class="nav-item-indicator"></div>
                   
-                  <div 
+                  <button 
+                    type="button"
                     class="nav-item-checkbox ${isChecked}" 
                     id="checkbox-item-${item.id}"
                     onclick="toggleTopicProgress(${item.id}, event)"
+                    aria-label="Отметить тему ${item.id} как выполненную"
+                    title="${isChecked ? 'Отметить как невыполненную' : 'Отметить как выполненную'}"
                   >
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                       <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                  </div>
+                  </button>
                   
-                  <div class="nav-item-title-wrapper">
-                    <div class="nav-item-title" style="display: flex; align-items: center; justify-content: space-between;">
-                      <span>${item.t}</span>
-                      ${dueIndicator}
+                  <button 
+                    type="button"
+                    class="nav-item-select-btn" 
+                    onclick="selectTopic(${item.id})"
+                    aria-label="Выбрать тему ${item.id}: ${item.t}"
+                  >
+                    <div class="nav-item-title-wrapper">
+                      <div class="nav-item-title" style="display: flex; align-items: center; justify-content: space-between;">
+                        <span>${item.t}</span>
+                        ${dueIndicator}
+                      </div>
+                      <div class="nav-item-sub">
+                        <span>Тема ${item.id}</span>
+                        <span style="font-size: 10px; opacity: 0.85;">${item.q}</span>
+                      </div>
                     </div>
-                    <div class="nav-item-sub">
-                      <span>Тема ${item.id}</span>
-                      <span style="font-size: 10px; opacity: 0.85;">${item.q}</span>
-                    </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               `;
             }).join('')}
           </div>
