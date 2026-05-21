@@ -10,13 +10,13 @@
 - Khan Academy RU → «Арифметика» → «Дроби» — [ru.khanacademy.org/math/arithmetic/fraction-arithmetic](https://ru.khanacademy.org/math/arithmetic/fraction-arithmetic)
 - Khan Academy RU → «Арифметика» → «Проценты» — [ru.khanacademy.org/math/arithmetic/decimals](https://ru.khanacademy.org/math/arithmetic/decimals)
 - Khan Academy RU → «Алгебра» → «Степени и корни» — [ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals](https://ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals)
-- YouTube: «Борис Трушин — Магия степеней» — [youtube.com/watch?v=kY0SwOt5hZo](https://www.youtube.com/watch?v=kY0SwOt5hZo)
+- YouTube: «Борис Трушин — Магия степеней» — [youtube.com/watch?v=k4U-U3oV2hQ](https://www.youtube.com/watch?v=k4U-U3oV2hQ)
 - YouTube: «GetAClass — Степени» — [youtube.com/watch?v=Lz7ikRiCAYs](https://www.youtube.com/watch?v=Lz7ikRiCAYs)
 - YouTube: «Математика TutorOnline — проценты» — [youtube.com/watch?v=nbJpienfwMA](https://www.youtube.com/watch?v=nbJpienfwMA)
 
 **Видео (английский):**
 - Khan Academy EN → «Arithmetic» → «Fractions», «Percentages» — [khanacademy.org/math/arithmetic](https://www.khanacademy.org/math/arithmetic)
-- YouTube: «Organic Chemistry Tutor — Exponents and Radicals» — [youtube.com/watch?v=1cMqPs5tlC_zyviydr](https://www.youtube.com/watch?v=Lz7ikRiCAYs)
+- YouTube: «Organic Chemistry Tutor — Exponents and Radicals» — [youtube.com/watch?v=gT8v878e1o0](https://www.youtube.com/watch?v=gT8v878e1o0)
 
 **Задачи:**
 - Khan Academy → после каждого видео есть «Practice» с автопроверкой
@@ -31,7 +31,7 @@
 - Khan Academy RU → «Алгебра» → «Линейные уравнения» — [ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:linear-equations-graphs](https://ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:linear-equations-graphs)
 - Khan Academy RU → «Алгебра» → «Квадратные уравнения» — [ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-equations-functions](https://ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-equations-functions)
 - YouTube: «Валерий Волков — Линейные уравнения с одной переменной» — [youtube.com/watch?v=W7SoePQOWIY](https://www.youtube.com/watch?v=W7SoePQOWIY)
-- YouTube: «Борис Трушин — Квадратные уравнения» — [youtube.com/watch?v=R9K4l_V37pU](https://www.youtube.com/watch?v=R9K4l_V37pU)
+- YouTube: «Борис Трушин — Квадратные уравнения» — [youtube.com/watch?v=vT3zO-cK9a4](https://www.youtube.com/watch?v=vT3zO-cK9a4)
 - YouTube: «MathFan — Уравнения с дробями» — [youtube.com/watch?v=ez5ArcPb0Qg](https://www.youtube.com/watch?v=ez5ArcPb0Qg)
 
 **Видео (английский):**
@@ -180,9 +180,9 @@
 ### Тема 16: Сравнение величин (колонки А и Б)
 
 **Видео (казахский):**
-- YouTube: «Салыстырулар! Математикалық сауаттылық! ҰБТ» — [youtube.com/watch?v=F3zW-QJkRPA](https://www.youtube.com/watch?v=F3zW-QJkRPA)
-- YouTube: «Салыстыру есептерін шешу әдістері» — [youtube.com/watch?v=k4V0y6UqYqA](https://www.youtube.com/watch?v=k4V0y6UqYqA)
-- YouTube: «Математикалық сауаттылық есептері #Салыстыру» — [youtube.com/watch?v=4dJ4K9M00lQ](https://www.youtube.com/watch?v=4dJ4K9M00lQ)
+- YouTube: «Салыстыру есептері. Математикалық сауаттылық» — [youtube.com/watch?v=GdeDe-MtolM](https://www.youtube.com/watch?v=GdeDe-MtolM)
+- YouTube: «Салыстыру есептерін шешу әдістері» — [youtube.com/watch?v=TTizBh0UmdM](https://www.youtube.com/watch?v=TTizBh0UmdM)
+- YouTube: «Сандарды салыстыруға бір есеп» — [youtube.com/watch?v=_KnBLwV_qCQ](https://www.youtube.com/watch?v=_KnBLwV_qCQ)
 
 **Задачи:**
 - iTest.kz → раздел «Математическая грамотность» — [itest.kz/ru/ent/matematicheskaya-gramotnost](https://itest.kz/ru/ent/matematicheskaya-gramotnost)
