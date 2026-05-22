@@ -1142,6 +1142,17 @@
             </button>
           </div>
         </div>
+        
+        <!-- Global Resources Tab (Static) -->
+        <div style="flex: 0 0 auto; border-bottom: 1px solid var(--border-color); background: var(--bg-surface); margin-bottom: 4px;">
+          <div class="nav-item ${currentSelectedId === 'resources' ? 'active' : ''}" id="nav-item-resources" onclick="selectTopic('resources')" style="--badge-accent: var(--color-block-4); margin: 8px 12px; border-radius: 8px;">
+            <div class="nav-item-indicator"></div>
+            <div class="nav-item-content" style="padding-left: 12px; padding-top: 4px; padding-bottom: 4px;">
+              <div class="nav-item-title" style="font-weight: 600; font-size: 14px; color: var(--color-block-4);">📚 Полезные ресурсы & Расписание</div>
+            </div>
+          </div>
+        </div>
+
         <!-- Rendered Navigation Items List -->
         <nav class="nav-list" id="navList"></nav>
       </aside>
@@ -1170,6 +1181,10 @@
           { u: 'https://www.youtube.com/watch?v=LovGBezXGDc', n: '3 типа задач на дроби и проценты', d: '✅ Подтверждено. Разбирает все 3 типа: нахождение части от целого, целого по части, и дроби одного числа от другого. Именно эти 3 типа встречаются в ТГО.' }
         ],
         tasks: [
+          { u: 'https://ru.khanacademy.org/math/arithmetic/fraction-arithmetic', n: 'Дроби — Khan Academy RU', d: 'Интерактивный курс по обыкновенным дробям с теорией и упражнениями.' },
+          { u: 'https://ru.khanacademy.org/math/arithmetic/decimals', n: 'Десятичные дроби и проценты — Khan Academy RU', d: 'Курс по десятичным дробям, процентам и операциям с ними.' },
+          { u: 'https://stepik.org/catalog?query=математика', n: 'Stepik: Математика с нуля', d: 'Бесплатные интерактивные онлайн-курсы по математике на платформе Stepik.' },
+          { u: 'http://www.mathprofi.ru', n: 'Математический справочник MathProfi', d: 'Подробные теоретические статьи и практические примеры решений задач.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=6', n: 'Дроби — РЕШУ ОГЭ (тема 6)', d: 'Сотни задач на дроби с пошаговыми решениями. Нажать «Пройти тестирование по этим заданиям» — получишь 10 случайных задач.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=17', n: 'Проценты — РЕШУ ОГЭ (тема 17)', d: 'Текстовые задачи на простые и сложные проценты.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=79', n: 'Смеси и сплавы — РЕШУ ОГЭ (тема 79)', d: 'Реальные задачи ОГЭ на смеси, сплавы и концентрацию.' },
@@ -1180,10 +1195,13 @@
       {
         id: 2, b: 1, bn: 'Блок 1 — Базовая математика', t: 'Степени', q: 'Пул 8 вопр. (1A, 3B, 4C)',
         vids: [
+          { u: 'https://www.youtube.com/watch?v=k4U-U3oV2hQ', n: 'Борис Трушин — Магия степеней', d: 'Магические трюки со степенями от Бориса Трушина. Объяснение законов степеней.' },
           { u: 'https://www.youtube.com/watch?v=Lz7ikRiCAYs', n: 'ВСЕ про СТЕПЕНИ и корни — базовый уровень', d: '✅ Подтверждено. Видео 2025 года. Разбирает степени с нуля и до уровня базовой математики: целые, дробные, отрицательные показатели, свойства степеней. Именно базовый уровень — как в ТГО, без лишнего.' },
-          { u: 'https://www.youtube.com/watch?v=LymE-Y8Nux8', n: 'Степени и корни 1 — Валерий Волков', d: '✅ Подтверждено. Валерий Волков (репетитор, известный канал). Медленный темп, подходит для восстановления с нуля. Объясняет через конкретные числовые примеры.' }
+          { u: 'https://www.youtube.com/watch?v=LymE-Y8Nux8', n: 'Степени и корни 1 — Валерий Волков', d: '✅ Подтверждено. Валерий Волков (репетитор, известный канал). Медленный темп, подходит для восстановления с нуля. Объясняет через конкретные числовые примеры.' },
+          { u: 'https://www.youtube.com/watch?v=gT8v878e1o0', n: 'Organic Chemistry Tutor — Exponents and Radicals', d: 'Detailed English explanation of rules of exponents and radical equations.' }
         ],
         tasks: [
+          { u: 'https://ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals', n: 'Рациональные степени и радикалы — Khan Academy RU', d: 'Теория степеней и корней с интерактивными упражнениями.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=54', n: 'Степени и корни — РЕШУ ОГЭ (тема 54)', d: 'Задачи ОГЭ на степени и корни с разбором. Формат близкий к ТГО. Выбирай «Пройти тестирование».' }
         ],
         tip: 'a⁻ⁿ = 1/aⁿ. a^(1/2)=√a. Свойства: aⁿ×aᵐ=aⁿ+ᵐ; (aⁿ)ᵐ=aⁿᵐ; aⁿ/aᵐ=aⁿ⁻ᵐ. a⁰=1 (при a≠0). Отрицательный показатель — это переворот дроби.'
@@ -1192,9 +1210,11 @@
         id: 3, b: 1, bn: 'Блок 1 — Базовая математика', t: 'Квадратные и кубические корни', q: 'Пул 8 вопр. (1A, 3B, 4C)',
         vids: [
           { u: 'https://www.youtube.com/watch?v=XT5KbjVchTc', n: 'Квадратный и кубический корень — Урок 3', d: '✅ Подтверждено. Алгебра 8 класс. Полное описание: «Как найти числовые значения квадратного, кубического и других корней». Разбирает вычисление через примеры с нуля, включая ∛0.000064 — именно такие задачи в ТГО.' },
-          { u: 'https://www.youtube.com/watch?v=_8gdtm2tkRg', n: 'Алгебра 8. Урок 5 — Квадратный корень и свойства', d: '✅ Подтверждено. Описание: «Изучается квадратный корень и арифметический квадратный корень. Даются свойства и применение для извлечения корней». Системно, с нуля.' }
+          { u: 'https://www.youtube.com/watch?v=_8gdtm2tkRg', n: 'Алгебра 8. Урок 5 — Квадратный корень и свойства', d: '✅ Подтверждено. Описание: «Изучается квадратный корень и арифметический квадратный корень. Даются свойства и применение для извлечения корней». Системно, с нуля.' },
+          { u: 'https://www.youtube.com/watch?v=gT8v878e1o0', n: 'Organic Chemistry Tutor — Exponents and Radicals', d: 'English lesson covering simplification of exponents and radicals.' }
         ],
         tasks: [
+          { u: 'https://ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals', n: 'Степени и корни — Khan Academy RU', d: 'Интерактивные упражнения на свойства корней и степеней.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=54', n: 'Степени и корни — РЕШУ ОГЭ (тема 54)', d: 'Задачи на корни с пошаговыми разборами.' }
         ],
         tip: '∛0.000064: запиши как 64×10⁻⁶ → ∛64=4, ∛10⁻⁶=10⁻² → ответ 0.04. Общий приём: разбей число на «таблично хорошую» часть и степень 10.'
@@ -1202,10 +1222,14 @@
       {
         id: 4, b: 1, bn: 'Блок 1 — Базовая математика', t: 'Линейные уравнения и неравенства', q: 'Пул 8 вопр. (1A, 3B, 4C)',
         vids: [
+          { u: 'https://www.youtube.com/watch?v=ppOZsPSUogc', n: 'Professor Leonard — Solving Equations', d: 'Comprehensive English lesson on solving linear equations step-by-step.' },
           { u: 'https://www.youtube.com/watch?v=W7SoePQOWIY', n: 'Линейные уравнения с одной переменной — 7 класс', d: '✅ Подтверждено. Описание: «Шпаргалка PDF для 7 класса + тест 2 мин». Разбирает алгоритм решения линейных уравнений с нуля, переносы слагаемых, деление на коэффициент. Базовый уровень — как в ТГО.' },
           { u: 'https://www.youtube.com/watch?v=SStgTvovo50', n: '7 класс. Линейные неравенства', d: '✅ Подтверждено. Канал Prizmamath. Объясняет неравенства, числовую прямую, знак при умножении на отрицательное. Именно эта ловушка (смена знака) — типичная ошибка в ТГО.' }
         ],
         tasks: [
+          { u: 'https://ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:linear-equations-graphs', n: 'Линейные уравнения и графики — Khan Academy RU', d: 'Курс линейных уравнений с упражнениями.' },
+          { u: 'http://www.mathprofi.ru', n: 'MathProfi: Решение линейных уравнений', d: 'Теория и подробные примеры решения линейных уравнений с решениями.' },
+          { u: 'https://archive.org/details/skanavi_sbornik', n: 'Сканави: Сборник задач по математике', d: 'Классический задачник на archive.org для тренировки навыков и скорости вычислений.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=7', n: 'Линейные уравнения — РЕШУ ОГЭ (тема 7)', d: 'Линейные уравнения и системы уравнений с подробным разбором.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=55', n: 'Линейные неравенства — РЕШУ ОГЭ (тема 55)', d: 'Числовые неравенства, их свойства, решение линейных неравенств.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=51', n: 'Неравенства — РЕШУ ОГЭ (тема 51)', d: 'Общие свойства числовых неравенств и систем с разборами.' }
@@ -1215,9 +1239,11 @@
       {
         id: 5, b: 1, bn: 'Блок 1 — Базовая математика', t: 'Квадратные уравнения', q: 'Пул 8 вопр. (1A, 3B, 4C)',
         vids: [
+          { u: 'https://www.youtube.com/watch?v=vT3zO-cK9a4', n: 'Борис Трушин — Квадратные уравнения', d: 'Теория квадратных уравнений, вывод дискриминанта и теоремы Виета от Бориса Трушина.' },
           { u: 'https://www.youtube.com/watch?v=ppOZsPSUogc', n: 'Квадратные уравнения 8 класс. Как решать, формула корней', d: '✅ Подтверждено. Описание: «Математика 8 класс. Говорим про Квадратные Уравнения. Как решать. В серии роликов: формула корней, дискриминант». Именно для начинающих — пошагово через формулу.' }
         ],
         tasks: [
+          { u: 'https://ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-equations-functions', n: 'Квадратные уравнения — Khan Academy RU', d: 'Интерактивный курс по квадратным уравнениям с упражнениями.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=43', n: 'Квадратные уравнения — РЕШУ ОГЭ (тема 43)', d: 'Задачи ОГЭ на квадратные уравнения с полными разборами.' }
         ],
         tip: 'D=b²−4ac. D>0→два корня: x=(−b±√D)/(2a). D=0→один корень: x=−b/(2a). D<0→корней нет. Быстрый частный случай: x²=N → x=±√N.'
@@ -1229,6 +1255,7 @@
           { u: 'https://www.youtube.com/watch?v=6qMq6ZQjgDQ', n: 'Уравнения с дробями 5 класс — как решать?', d: '✅ Подтверждено. Дополнительный разбор простых и понятных примеров.' }
         ],
         tasks: [
+          { u: 'http://www.mathprofi.ru', n: 'MathProfi: Дробно-рациональные уравнения', d: 'Разборы решений дробно-рациональных уравнений различных уровней сложности.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=45', n: 'Рациональные уравнения — РЕШУ ОГЭ (тема 45)', d: 'Уравнения, содержащие переменные в знаменателях дробей.' }
         ],
         tip: 'Алгоритм: 1) найди НОК всех знаменателей. 2) умножь ОБЕ части на НОК — дробей не остаётся. 3) реши простое уравнение. 4) проверь: знаменатели в исходном ≠ 0.'
@@ -1240,6 +1267,7 @@
           { u: 'https://www.youtube.com/watch?v=ZA4E_upsj9w', n: 'Последняя цифра числа — циклы степеней', d: '✅ Подтверждено. Логическое объяснение циклов (2ⁿ, 3ⁿ, 7ⁿ, 9ⁿ) для быстрого решения.' }
         ],
         tasks: [
+          { u: 'https://brilliant.org', n: 'Brilliant.org: Number Theory', d: 'Интерактивный курс по теории чисел, свойствам делимости и остаткам.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=54', n: 'Степени — РЕШУ ОГЭ (тема 54)', d: 'Отфильтруй задачи на «последнюю цифру» — они здесь есть.' }
         ],
         tip: 'Циклы: 2ⁿ→(2,4,8,6) длина 4; 3ⁿ→(3,9,7,1) длина 4; 7ⁿ→(7,9,3,1) длина 4; 9ⁿ→(9,1) длина 2. Алгоритм: найди остаток от деления показателя на длину цикла → номер в цикле.'
@@ -1251,6 +1279,8 @@
           { u: 'https://www.youtube.com/watch?v=e63HEx_bils', n: 'НОД vs НОК | TutorOnline', d: '✅ Подтверждено. Объяснение разницы между НОД и НОК, способы их быстрого нахождения на примерах.' }
         ],
         tasks: [
+          { u: 'https://ru.khanacademy.org/math/pre-algebra/pre-algebra-factors-multiples', n: 'Факторизация и делимость — Khan Academy RU', d: 'Курс по простым числам, делимости, НОД и НОК с интерактивными тестами.' },
+          { u: 'https://www.khanacademy.org/math/pre-algebra/pre-algebra-factors-multiples', n: 'Factors and Multiples — Khan Academy EN', d: 'English exercises and lessons on divisibility rules, GCD, and LCM.' },
           { u: 'https://math-ege.sdamgia.ru/test?theme=172', n: 'Делимость чисел — РЕШУ ЕГЭ (тема 172)', d: 'Продвинутые задачи на свойства чисел, делимость, НОД и НОК.' }
         ],
         tip: 'Простые до 30: 2,3,5,7,11,13,17,19,23,29. НОД(a,b): делим большее на меньшее, остаток становится делителем — повторяем до нуля. НОК(a,b) = a×b/НОД(a,b).'
@@ -1258,10 +1288,13 @@
       {
         id: 9, b: 2, bn: 'Блок 2 — Темы из реального теста', t: 'Диаграммы Венна и множества', q: 'Пул 8 вопр. (1A, 3B, 4C)',
         vids: [
+          { u: 'https://www.youtube.com/watch?v=6hESR-SX2JM', n: 'Organic Chemistry Tutor — Venn Diagram Problems (EN)', d: 'English walkthrough of Venn diagrams for probability and statistics.' },
           { u: 'https://www.youtube.com/watch?v=6hESR-SX2JM', n: 'Доказать равенства с помощью диаграмм Венна', d: '✅ Подтверждено. Визуальный разбор операций над множествами (объединение, пересечение, разность).' },
           { u: 'https://www.youtube.com/watch?v=GUYuKZ63b3I', n: 'Действия над множествами и диаграммы Эйлера-Венна', d: '✅ Подтверждено. Подробный разбор практических задач на пересечение двух и трех множеств.' }
         ],
         tasks: [
+          { u: 'https://www.khanacademy.org/math/statistics-probability', n: 'Venn Diagrams — Khan Academy EN', d: 'Practice problems and video instructions on set operations and diagrams.' },
+          { u: 'https://www.ets.org/gre.html', n: 'GRE Quantitative Reasoning Practice', d: 'Официальные задания GRE ETS по анализу данных и кругам Венна.' },
           { u: 'https://ru.khanacademy.org/math/statistics-probability/probability-library/basic-set-ops/e/basic_set_notation', n: 'Множества — Khan Academy RU', d: 'Интерактивные задачи с автопроверкой. Бесплатно, без регистрации.' }
         ],
         tip: 'Формула: |A∪B| = |A| + |B| − |A∩B|. Пример: 30 чел, спорт=18, music=12, оба=5. Только спорт: 18−5=13. Только music: 12−5=7. Ни того ни другого: 30−13−7−5=5.'
@@ -1273,6 +1306,8 @@
           { u: 'https://www.youtube.com/watch?v=yP8sQecYMyI', n: 'Формулы арифметической прогрессии | Математика', d: '✅ Подтверждено. Разбор формул суммы прогрессии и полезных свойств для быстрого счета на тестах.' }
         ],
         tasks: [
+          { u: 'https://ru.khanacademy.org/math/algebra/x2f8bb11595b61c86:sequences', n: 'Последовательности и прогрессии — Khan Academy RU', d: 'Курс по арифметическим и геометрическим прогрессиям с онлайн-задачами.' },
+          { u: 'https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:sequences', n: 'Sequences — Khan Academy EN', d: 'English lessons on arithmetic and geometric series and sequences.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=113', n: 'Арифметическая прогрессия — РЕШУ ОГЭ (тема 113)', d: 'Задачи на формулу n-го члена и суммы арифметической прогрессии.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=46', n: 'Геометрическая прогрессия — РЕШУ ОГЭ (тема 46)', d: 'Задачи на геометрические последовательности и прогрессии.' }
         ],
@@ -1281,10 +1316,13 @@
       {
         id: 11, b: 2, bn: 'Блок 2 — Темы из реального теста', t: 'Комбинаторика и вероятность', q: 'Пул 8 вопр. (1A, 3B, 4C)',
         vids: [
+          { u: 'https://www.youtube.com/watch?v=yP8sQecYMyI', n: 'Organic Chemistry Tutor — Permutations and Combinations', d: 'Introductory video tutorial on counting principles, permutations, and combinations in English.' },
           { u: 'https://www.youtube.com/watch?v=_dXEMtdD550', n: 'Теория вероятностей | Математика TutorOnline', d: '✅ Подтверждено. Объяснение теории вероятностей с самого нуля на понятных жизненных примерах.' },
           { u: 'https://www.youtube.com/watch?v=8RuhpsayQJg', n: 'Вероятность события. 9 класс', d: '✅ Подтверждено. Классическая вероятность: благоприятные исходы к общему числу.' }
         ],
         tasks: [
+          { u: 'https://ru.khanacademy.org/math/probability', n: 'Теория вероятностей — Khan Academy RU', d: 'Раздел теории вероятностей и комбинаторики с интерактивной практикой.' },
+          { u: 'https://www.khanacademy.org/math/statistics-probability', n: 'Probability and Combinations — Khan Academy EN', d: 'English exercises on permutations, combinations, and probability rules.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=20', n: 'Вероятность — РЕШУ ОГЭ (тема 20)', d: 'Задачи на классическую вероятность и статистику.' }
         ],
         tip: 'P = (число благоприятных исходов) / (число всех исходов). Пример: из 10 шаров 3 красных → P(красный) = 3/10 = 0.3. Для ТГО: читай условие медленно, не угадывай.'
@@ -1297,6 +1335,7 @@
           { u: 'https://www.youtube.com/watch?v=_KnBLwV_qCQ', n: 'Сандарды салыстыруға бір есеп', d: '✅ Подтверждено. Короткий видео-разбор реальных экзаменационных задач на сравнение величин.' }
         ],
         tasks: [
+          { u: 'https://probtest.testcenter.kz', n: 'Сравнение величин — testcenter.kz', d: 'Официальный пробный тест ТГО с разделом сравнения колонок.' },
           { u: 'https://itest.kz/ru/ent/matematicheskaya-gramotnost', n: 'Математическая грамотность — iTest.kz', d: 'Огромный банк бесплатных интерактивных заданий, включая сравнение величин (на русском и казахском).' },
           { u: 'https://bilim-plus.kz', n: 'Сравнение колонок — bilim-plus.kz', d: 'Практические задания на сравнение величин в блоке математической грамотности ТГО.' }
         ],
@@ -1309,6 +1348,9 @@
           { u: 'https://www.youtube.com/watch?v=-Xuc7DpePC8', n: 'Площади фигур — треугольник, параллелограмм, трапеция, ромб', d: '✅ Подтверждено. Подробный разбор решения геометрических задач на площади.' }
         ],
         tasks: [
+          { u: 'https://ru.khanacademy.org/math/basic-geometry', n: 'Базовая геометрия — Khan Academy RU', d: 'Курс по площадям и периметрам фигур, объёмам пространственных тел с тестами.' },
+          { u: 'https://www.khanacademy.org/math/basic-geometry', n: 'Basic Geometry — Khan Academy EN', d: 'English practice for area, perimeter, and volume calculations.' },
+          { u: 'http://www.mathprofi.ru', n: 'MathProfi: Раздел Геометрия', d: 'Статьи и примеры решения геометрических задач на площади плоских фигур.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=98', n: 'Площади на решетке — РЕШУ ОГЭ (тема 98)', d: 'Нахождение площадей фигур по узлам сетки.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=66', n: 'Геометрические фигуры — РЕШУ ОГЭ (тема 66)', d: 'Задачи на площади треугольников, четырехугольников и кругов.' }
         ],
@@ -1317,7 +1359,7 @@
       {
         id: 13, b: 3, bn: 'Блок 3 — Геометрия и данные', t: 'Теорема Пифагора', q: 'Пул 8 вопр. (1A, 3B, 4C)',
         vids: [
-          { u: 'https://www.youtube.com/watch?v=7li1EeptXi0', n: 'Урок 39. Теорема Пифагора', d: '✅ Подтверждено. Видео найдено в поиске, канал про геометрию. Урок 39 из серии — значит системный курс с нуля. Разбирает формулу, доказательство, применение в задачах с числовыми примерами.' },
+          { u: 'https://www.youtube.com/watch?v=7li1EeptXi0', n: 'Теорема Пифагора — подробный разбор', d: 'Видео-урок о формуле теоремы Пифагора, её геометрическом смысле и доказательстве.' },
           { u: 'https://www.youtube.com/watch?v=B0JSbnOZr38', n: 'Геометрия 8 класс. Теорема Пифагора — GetAClass', d: '✅ Подтверждено. Понятное и наглядное объяснение теоремы Пифагора и её практического применения.' }
         ],
         tasks: [
@@ -1328,10 +1370,12 @@
       {
         id: 14, b: 3, bn: 'Блок 3 — Геометрия и данные', t: 'Чтение диаграмм и графиков', q: '4 вопр. (1A, 2B, 1C)',
         vids: [
+          { u: 'https://ru.khanacademy.org/math/pre-algebra/pre-algebra-rates-and-ratios/pre-algebra-graphs/v/reading-bar-charts', n: 'Чтение столбчатых диаграмм — Khan Academy RU', d: 'Официальный русскоязычный урок Khan Academy по разбору графиков и чтению диаграмм.' },
           { u: 'https://www.youtube.com/watch?v=dcz_j5FenL4', n: 'Столбчатые, линейные, круговые диаграммы и таблицы. 5 класс', d: '✅ Подтверждено. Базовый разбор чтения и интерпретации различных видов диаграмм.' },
           { u: 'https://www.youtube.com/watch?v=KzrS-jl4Aa8', n: 'Графики зависимостей и чтение данных | Математика', d: '✅ Подтверждено. Урок по чтению графиков, зависимостей и анализу координатных плоскостей.' }
         ],
         tasks: [
+          { u: 'https://www.ets.org/gre.html', n: 'GRE Data Interpretation Questions', d: 'Задачи ETS GRE по интерпретации данных: чтение сложных таблиц и комбинированных диаграмм.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=4', n: 'Диаграммы — РЕШУ ОГЭ (тема 4)', d: 'Задачи на анализ и чтение диаграмм различных типов.' },
           { u: 'https://math-oge.sdamgia.ru/test?theme=50', n: 'Графики и таблицы — РЕШУ ОГЭ (тема 50)', d: 'Извлечение данных из графиков зависимостей и таблиц.' }
         ],
@@ -1344,6 +1388,8 @@
           { u: 'https://www.youtube.com/watch?v=TbdL6Ja0oZg', n: 'Упражнения на пространственное мышление: развертки кубиков', d: '✅ Подтверждено. Практический тест с объяснениями правильных вариантов сборки фигур.' }
         ],
         tasks: [
+          { u: 'https://www.assessmentday.com', n: 'Spatial Reasoning Test — AssessmentDay', d: 'Тесты на пространственное мышление, развертки кубиков и трехмерное вращение фигур.' },
+          { u: 'https://www.logic-puzzles.org', n: 'Logic Grid Puzzles — logic-puzzles.org', d: 'Интерактивные логические таблицы и сетки. Отличная тренировка для аналитического мышления ТГО.' },
           { u: 'https://www.123test.com/spatial-reasoning-test/', n: 'Spatial Reasoning — 123test.com', d: 'Бесплатные тесты на пространственное мышление. На английском, но визуальные — язык не нужен.' },
           { u: 'https://www.brainzilla.com/logic/logic-grid/', n: 'Logic Grid Puzzles — brainzilla.com', d: 'Логические таблицы: «Аскар, Бекзат, Серик — врач, учитель, инженер». Именно этот тип встречается в ТГО.' }
         ],
@@ -1356,6 +1402,9 @@
           { u: 'https://www.youtube.com/watch?v=tB2N4ESJDDQ', n: 'Работа с текстом. Тема и основная мысль текста', d: '✅ Подтверждено. Практические советы по пониманию структуры абзацев.' }
         ],
         tasks: [
+          { u: 'https://probtest.testcenter.kz', n: 'Пробное тестирование НЦТ — testcenter.kz', d: 'Официальный тренажер пробных тестов ТГО от Национального центра тестирования РК.' },
+          { u: 'https://www.ets.org/gre.html', n: 'GRE Analytical Reading — ETS PowerPrep', d: 'Официальные тексты GRE для тренировки глубокого анализа информации.' },
+          { u: 'https://magoosh.com', n: 'Magoosh GRE Free Practice', d: 'Бесплатные упражнения на чтение и анализ сложных текстов от Magoosh.' },
           { u: 'https://bilim-plus.kz', n: 'ТГО тексты — bilim-plus.kz', d: 'Реальные пробные ТГО тексты в формате экзамена. Платно (~990₸), но самый близкий к реальному формат.' },
           { u: 'https://nqt-test.online/kt-pvo-magistratura-testy/', n: 'ТГО — nqt-test.online', d: 'Пробные ТГО тесты для магистратуры. Платно (~3900₸/месяц). Есть пробный вариант.' }
         ],
@@ -1368,6 +1417,8 @@
           { u: 'https://www.youtube.com/watch?v=tB2N4ESJDDQ', n: 'Работа с текстом. Тема и основная мысль текста', d: '✅ Подтверждено. Определение темы и идеи текста на реальных примерах.' }
         ],
         tasks: [
+          { u: 'https://probtest.testcenter.kz', n: 'Пробный тест ТГО — testcenter.kz', d: 'Официальные пробные тексты и задачи на понимание основной идеи.' },
+          { u: 'https://www.ets.org/gre.html', n: 'GRE Verbal Reading Comprehension', d: 'Практика чтения текстов с поиском основной мысли от ETS.' },
           { u: 'https://bilim-plus.kz', n: 'ТГО тексты — bilim-plus.kz', d: 'Тренируйся на реальных текстах ТГО — там именно этот тип вопросов.' }
         ],
         tip: 'Алгоритм: 1) прочитай весь текст. 2) спроси: «что хотел сказать автор?» 3) правильный ответ обычно самый ОБЩИЙ, а не конкретный. Ловушка: варианты с верными фактами из текста, но которые не отражают главную мысль.'
@@ -1379,6 +1430,7 @@
           { u: 'https://www.youtube.com/watch?v=tB2N4ESJDDQ', n: 'Определение взаимосвязей в предложениях', d: '✅ Подтверждено. Как связываются идеи в абзацах с помощью вводных слов.' }
         ],
         tasks: [
+          { u: 'https://probtest.testcenter.kz', n: 'Пробные тексты — testcenter.kz', d: 'Официальные задания на определение причин и следствий из прочитанного текста.' },
           { u: 'https://bilim-plus.kz', n: 'ТГО тексты — bilim-plus.kz', d: 'Реальный формат задач с причинно-следственными связями.' }
         ],
         tip: 'Ключевые маркеры в тексте: «поэтому», «в результате», «следовательно», «из-за», «что привело к». Ловушка ТГО: вариант с верным суждением, которое НЕ следует из текста — а просто правда в жизни. Опирайся только на текст.'
@@ -1390,6 +1442,8 @@
           { u: 'https://www.youtube.com/watch?v=tB2N4ESJDDQ', n: 'Сравнение информации из разных источников', d: '✅ Подтверждено. Учит находить пересечения мнений авторов в разных абзацах.' }
         ],
         tasks: [
+          { u: 'https://probtest.testcenter.kz', n: 'Анализ источников — testcenter.kz', d: 'Официальные задания ТГО на сравнение двух текстов/источников.' },
+          { u: 'https://www.ets.org/gre.html', n: 'GRE Dual Passage Questions', d: 'Упражнения GRE на сравнение и сопоставление двух текстов на одну тему.' },
           { u: 'https://bilim-plus.kz', n: 'ТГО тексты — bilim-plus.kz', d: 'Задачи уровня C на сравнение источников — именно здесь они есть.' }
         ],
         tip: 'Стратегия: 1) прочитай оба источника. 2) найди что они оба подтверждают. 3) правильный ответ — вывод, который СЛЕДУЕТ из ОБОИХ. Ответ не должен противоречить ни одному из них.'
@@ -1901,9 +1955,97 @@
       });
     };
 
+    window.copyPromptText = function(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Скопировано в буфер обмена!');
+      }).catch(err => {
+        console.error('Copy failed', err);
+        prompt('Скопируйте текст ниже:', text);
+      });
+    };
+
+    function renderGeneralResources(container) {
+      container.style.opacity = 0;
+      setTimeout(() => {
+        container.innerHTML = `
+          <div class="content-header-card" style="--topic-accent: var(--color-block-4);">
+            <div class="content-meta-row">
+              <div class="topic-badge" style="--topic-accent: var(--color-block-4);">
+                <span>Глобальный справочник</span>
+              </div>
+            </div>
+            <h1 class="content-title">Полезные ресурсы & Расписание</h1>
+            <p class="content-desc">Здесь собраны все основные материалы, тренажеры и расписание для подготовки к ТГО.</p>
+          </div>
+
+          <div class="theory-section">
+            <h3 class="section-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:20px; height:20px; margin-right:8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+              Официальные тесты и тренажеры
+            </h3>
+            <div class="video-grid">
+              <a href="https://probtest.testcenter.kz" target="_blank" class="video-card">
+                <div class="video-title">Национальный Центр Тестирования (НЦТ)</div>
+                <div class="video-desc">Официальные пробные тесты. Самый надежный источник форматов заданий.</div>
+              </a>
+              <a href="https://itest.kz/ru/ent/matematicheskaya-gramotnost" target="_blank" class="video-card">
+                <div class="video-title">iTest.kz — Математическая грамотность</div>
+                <div class="video-desc">Огромный банк бесплатных интерактивных заданий (на русском и казахском).</div>
+              </a>
+              <a href="https://bilim-plus.kz" target="_blank" class="video-card">
+                <div class="video-title">Bilim Plus</div>
+                <div class="video-desc">Реальные пробные ТГО тексты и сравнение колонок. Платный, но очень качественный ресурс.</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="theory-section">
+            <h3 class="section-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:20px; height:20px; margin-right:8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19.5A2.5 2.5 0 016.5 17H20"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path></svg>
+              Рекомендуемое расписание (4-6 недель)
+            </h3>
+            <div class="tip-card">
+              <p><strong>Неделя 1-2: Базовая математика</strong><br>Восстановите навыки счета, дроби, проценты, уравнения. Решайте Khan Academy и РЕШУ ОГЭ (темы 6, 7, 17).</p>
+              <p style="margin-top:8px;"><strong>Неделя 3: Геометрия и данные</strong><br>Площади, объемы, чтение графиков и диаграмм. Используйте MathProfi и GRE Data Interpretation.</p>
+              <p style="margin-top:8px;"><strong>Неделя 4: Логика и анализ текстов</strong><br>Круги Венна, комбинаторика, чтение сложных текстов. Тренируйтесь на GRE Verbal и Logic Grid Puzzles.</p>
+              <p style="margin-top:8px;"><strong>Неделя 5-6: Пробные тесты (Симуляция)</strong><br>Пишите полные тесты на время на testcenter.kz и bilim-plus.kz. Анализируйте свои ошибки.</p>
+            </div>
+          </div>
+
+          <div class="theory-section">
+            <h3 class="section-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:20px; height:20px; margin-right:8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+              Промпты для ChatGPT
+            </h3>
+            <p style="margin-bottom: 12px; font-size: 13.5px; color: var(--color-text-secondary);">Скопируйте эти промпты и отправьте ChatGPT, чтобы он стал вашим личным репетитором.</p>
+            <div class="video-grid">
+              <div class="video-card" onclick="copyPromptText('Действуй как строгий, но справедливый учитель математики. Объясни мне тему [ТЕМА] так, чтобы понял ученик 9 класса. Дай 3 практические задачи. Не давай ответы сразу — жди мои решения.')" style="cursor:pointer; border: 1px solid var(--color-primary); background: rgba(30, 136, 229, 0.05);" title="Нажмите, чтобы скопировать">
+                <div class="video-title" style="color: var(--color-primary);">👨‍🏫 Промпт: Личный репетитор</div>
+                <div class="video-desc" style="color: var(--color-primary); font-weight: 500; margin-top: 4px;">Нажмите, чтобы скопировать 📋</div>
+              </div>
+              <div class="video-card" onclick="copyPromptText('Придумай текст на 200 слов в научном стиле. Сделай 3 вопроса к тексту: 1 на главную мысль, 1 на причинно-следственную связь, 1 на заполнение пропуска в тексте.')" style="cursor:pointer; border: 1px solid var(--color-primary); background: rgba(30, 136, 229, 0.05);" title="Нажмите, чтобы скопировать">
+                <div class="video-title" style="color: var(--color-primary);">📝 Промпт: Генератор текстов</div>
+                <div class="video-desc" style="color: var(--color-primary); font-weight: 500; margin-top: 4px;">Нажмите, чтобы скопировать 📋</div>
+              </div>
+              <div class="video-card" onclick="copyPromptText('Я решаю задачу на сравнение колонок. Колонка А: [ВЫРАЖЕНИЕ 1]. Колонка Б: [ВЫРАЖЕНИЕ 2]. Объясни пошагово, как их сравнить, не вычисляя до конца. Какие числа лучше подставить для проверки?')" style="cursor:pointer; border: 1px solid var(--color-primary); background: rgba(30, 136, 229, 0.05);" title="Нажмите, чтобы скопировать">
+                <div class="video-title" style="color: var(--color-primary);">⚖️ Промпт: Сравнение колонок</div>
+                <div class="video-desc" style="color: var(--color-primary); font-weight: 500; margin-top: 4px;">Нажмите, чтобы скопировать 📋</div>
+              </div>
+            </div>
+          </div>
+        `;
+        container.style.opacity = 1;
+      }, 150);
+    }
+
     // Render right main content details
     function renderContent() {
       const contentArea = document.getElementById('contentArea');
+      if (currentSelectedId === 'resources') {
+        renderGeneralResources(contentArea);
+        return;
+      }
+      
       const topic = D.find(x => x.id === currentSelectedId);
       
       if (!topic) {
