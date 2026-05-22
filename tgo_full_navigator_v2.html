@@ -17,27 +17,27 @@
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --font-title: 'Outfit', sans-serif;
       
-      /* Color Palette - Premium Dark Mode */
-      --bg-main: #0f172a;
-      --bg-gradient: radial-gradient(circle at top right, #1e1b4b, #0f172a 60%);
-      --bg-sidebar: rgba(15, 23, 42, 0.6);
-      --bg-card: rgba(30, 41, 59, 0.45);
-      --bg-card-hover: rgba(30, 41, 59, 0.7);
-      --bg-active: rgba(99, 102, 241, 0.15);
+      /* Color Palette - LMS Light Mode */
+      --bg-main: #f8fafc;
+      --bg-gradient: radial-gradient(circle at top right, #f1f5f9, #f8fafc 60%);
+      --bg-sidebar: rgba(255, 255, 255, 0.85);
+      --bg-card: rgba(255, 255, 255, 0.65);
+      --bg-card-hover: rgba(255, 255, 255, 1);
+      --bg-active: rgba(79, 70, 229, 0.08);
       
-      --color-text-primary: #f8fafc;
-      --color-text-secondary: #94a3b8;
-      --color-text-muted: #8290a6;
+      --color-text-primary: #0f172a;
+      --color-text-secondary: #475569;
+      --color-text-muted: #64748b;
       
-      --color-border: rgba(255, 255, 255, 0.06);
-      --color-border-hover: rgba(255, 255, 255, 0.12);
-      --color-border-active: rgba(99, 102, 241, 0.4);
+      --color-border: rgba(0, 0, 0, 0.08);
+      --color-border-hover: rgba(0, 0, 0, 0.15);
+      --color-border-active: rgba(79, 70, 229, 0.4);
       
       /* Block Accents */
-      --color-block-1: #6366f1; /* Indigo */
-      --color-block-2: #06b6d4; /* Cyan */
-      --color-block-3: #10b981; /* Emerald */
-      --color-block-4: #f59e0b; /* Amber */
+      --color-block-1: #4f46e5; /* Indigo */
+      --color-block-2: #0284c7; /* Cyan */
+      --color-block-3: #059669; /* Emerald */
+      --color-block-4: #d97706; /* Amber */
       
       /* Border Radius */
       --radius-sm: 8px;
@@ -50,9 +50,9 @@
       
       /* Shadows */
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+      --shadow-glow: 0 0 20px rgba(79, 70, 229, 0.15);
     }
 
     * {
@@ -60,7 +60,7 @@
       margin: 0;
       padding: 0;
       scrollbar-width: thin;
-      scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+      scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
     }
 
     /* Scrollbar styling */
@@ -72,11 +72,11 @@
       background: transparent;
     }
     ::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.15);
       border-radius: 10px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.25);
     }
 
     body {
@@ -109,7 +109,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 24px;
-      background: rgba(15, 23, 42, 0.45);
+      background: rgba(255, 255, 255, 0.75);
       -webkit-backdrop-filter: blur(16px);
       backdrop-filter: blur(16px);
       border: 1px solid var(--color-border);
@@ -145,16 +145,16 @@
       font-weight: 700;
       font-size: 22px;
       letter-spacing: -0.02em;
-      background: linear-gradient(to right, #ffffff, #94a3b8);
+      background: linear-gradient(to right, #0f172a, #334155);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .brand-badge {
       font-size: 11px;
-      background: rgba(99, 102, 241, 0.15);
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      color: #a5b4fc;
+      background: rgba(79, 70, 229, 0.1);
+      border: 1px solid rgba(79, 70, 229, 0.2);
+      color: #4f46e5;
       padding: 2px 8px;
       border-radius: 99px;
       font-weight: 600;
@@ -165,7 +165,7 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(255, 255, 255, 0.5);
       border: 1px solid var(--color-border);
       padding: 10px 20px;
       border-radius: var(--radius-md);
@@ -188,7 +188,7 @@
 
     .progress-bar-bg {
       height: 8px;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.08);
       border-radius: 99px;
       overflow: hidden;
       position: relative;
@@ -243,7 +243,7 @@
 
     .search-input {
       width: 100%;
-      background: rgba(15, 23, 42, 0.6);
+      background: rgba(255, 255, 255, 0.9);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-sm);
       padding: 10px 14px 10px 38px;
@@ -256,7 +256,7 @@
     .search-input:focus {
       outline: none;
       border-color: var(--color-border-active);
-      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+      box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
     }
 
     .search-icon {
@@ -1080,6 +1080,75 @@
     .text-link-btn-reset {
       color: #ef4444;
     }
+
+    /* Pomodoro Widget */
+    .pomodoro-widget {
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid var(--color-border);
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      min-width: 180px;
+      flex-shrink: 0;
+    }
+    .pomodoro-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--color-block-4);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .pomo-count {
+      background: rgba(217, 119, 6, 0.15);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--color-block-4);
+    }
+    .pomodoro-timer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #pomoTimeDisplay {
+      font-family: var(--font-title);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      font-variant-numeric: tabular-nums;
+    }
+    .pomo-controls {
+      display: flex;
+      gap: 8px;
+    }
+    .pomo-btn {
+      background: rgba(255,255,255, 0.8);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--color-text-secondary);
+      transition: all var(--transition-fast);
+    }
+    .pomo-btn:hover {
+      background: var(--color-block-1);
+      color: white;
+      border-color: var(--color-block-1);
+    }
+    .pomo-widget--break .pomodoro-header {
+      color: var(--color-block-3);
+    }
+    .pomo-widget--break .pomo-count {
+      background: rgba(5, 150, 105, 0.15);
+      color: var(--color-block-3);
+    }
   </style>
 </head>
 <body>
@@ -1099,7 +1168,24 @@
         </div>
       </div>
 
-      <!-- Preparation Progress Bar Widget -->
+      <!-- Header Right Side: Progress & Pomodoro -->
+      <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+        <!-- Pomodoro Widget -->
+        <div class="pomodoro-widget" id="pomodoroWidget">
+          <div class="pomodoro-header">
+            <span id="pomoModeText">🍅 Фокус (25м)</span>
+            <span class="pomo-count" title="Завершено Помодоро сегодня" id="pomoCountDisplay">0</span>
+          </div>
+          <div class="pomodoro-timer">
+            <span id="pomoTimeDisplay">25:00</span>
+            <div class="pomo-controls">
+              <button class="pomo-btn" id="pomoStartBtn" onclick="togglePomodoro()">▶</button>
+              <button class="pomo-btn" id="pomoResetBtn" onclick="resetPomodoro()">↻</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preparation Progress Bar Widget -->
       <div class="progress-widget" id="progressWidget">
         <div class="progress-info">
           <div class="progress-header">
@@ -2318,6 +2404,79 @@
         contentArea.style.opacity = 1;
       }, 50);
     }
+    /* Pomodoro Timer Logic */
+    let pomoInterval = null;
+    let pomoTimeLeft = 25 * 60;
+    let isPomoRunning = false;
+    let isPomoBreak = false;
+    let completedPomodoros = 0;
+    
+    function updatePomodoroDisplay() {
+      const m = Math.floor(pomoTimeLeft / 60).toString().padStart(2, '0');
+      const s = (pomoTimeLeft % 60).toString().padStart(2, '0');
+      const timeString = `${m}:${s}`;
+      
+      document.getElementById('pomoTimeDisplay').innerText = timeString;
+      
+      if (isPomoRunning) {
+        document.title = `(${timeString}) ${isPomoBreak ? '☕ Отдых' : '🍅 Фокус'} - TGO Nav`;
+      } else {
+        document.title = 'TGO Navigator';
+      }
+    }
+    
+    window.togglePomodoro = function() {
+      if (isPomoRunning) {
+        clearInterval(pomoInterval);
+        isPomoRunning = false;
+        document.getElementById('pomoStartBtn').innerText = '▶';
+        updatePomodoroDisplay();
+      } else {
+        isPomoRunning = true;
+        document.getElementById('pomoStartBtn').innerText = '⏸';
+        pomoInterval = setInterval(() => {
+          if (pomoTimeLeft > 0) {
+            pomoTimeLeft--;
+            updatePomodoroDisplay();
+          } else {
+            // Timer finished
+            clearInterval(pomoInterval);
+            isPomoRunning = false;
+            document.getElementById('pomoStartBtn').innerText = '▶';
+            
+            if (!isPomoBreak) {
+              // Focus ended -> Break
+              completedPomodoros++;
+              document.getElementById('pomoCountDisplay').innerText = completedPomodoros;
+              isPomoBreak = true;
+              pomoTimeLeft = 5 * 60;
+              document.getElementById('pomodoroWidget').classList.add('pomo-widget--break');
+              document.getElementById('pomoModeText').innerText = '☕ Отдых (5м)';
+              alert('Помидорка завершена! Пора отдохнуть 5 минут.');
+            } else {
+              // Break ended -> Focus
+              isPomoBreak = false;
+              pomoTimeLeft = 25 * 60;
+              document.getElementById('pomodoroWidget').classList.remove('pomo-widget--break');
+              document.getElementById('pomoModeText').innerText = '🍅 Фокус (25м)';
+              alert('Отдых окончен! Пора за работу.');
+            }
+            updatePomodoroDisplay();
+          }
+        }, 1000);
+      }
+    };
+    
+    window.resetPomodoro = function() {
+      clearInterval(pomoInterval);
+      isPomoRunning = false;
+      document.getElementById('pomoStartBtn').innerText = '▶';
+      isPomoBreak = false;
+      pomoTimeLeft = 25 * 60;
+      document.getElementById('pomodoroWidget').classList.remove('pomo-widget--break');
+      document.getElementById('pomoModeText').innerText = '🍅 Фокус (25м)';
+      updatePomodoroDisplay();
+    };
 
     // Run app on load
     document.addEventListener('DOMContentLoaded', init);
