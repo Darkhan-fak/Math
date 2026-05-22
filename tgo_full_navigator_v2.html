@@ -1119,6 +1119,11 @@
       font-weight: 700;
       color: var(--color-text-primary);
       font-variant-numeric: tabular-nums;
+      cursor: pointer;
+      transition: color var(--transition-fast);
+    }
+    #pomoTimeDisplay:hover {
+      color: var(--color-block-1);
     }
     .pomo-controls {
       display: flex;
@@ -1177,7 +1182,7 @@
             <span class="pomo-count" title="Завершено Помодоро сегодня" id="pomoCountDisplay">0</span>
           </div>
           <div class="pomodoro-timer">
-            <span id="pomoTimeDisplay">25:00</span>
+            <span id="pomoTimeDisplay" onclick="editPomodoroTime()" title="Нажмите, чтобы изменить время">25:00</span>
             <div class="pomo-controls">
               <button class="pomo-btn" id="pomoStartBtn" onclick="togglePomodoro()">▶</button>
               <button class="pomo-btn" id="pomoResetBtn" onclick="resetPomodoro()">↻</button>
@@ -2476,6 +2481,26 @@
       document.getElementById('pomodoroWidget').classList.remove('pomo-widget--break');
       document.getElementById('pomoModeText').innerText = '🍅 Фокус (25м)';
       updatePomodoroDisplay();
+    };
+
+    window.editPomodoroTime = function() {
+      if (isPomoRunning) {
+        alert('Поставьте таймер на паузу, чтобы изменить время.');
+        return;
+      }
+      const currentMinutes = Math.floor(pomoTimeLeft / 60);
+      const input = prompt('Введите время в минутах (например, 25, 15, 5):', currentMinutes);
+      
+      if (input !== null) {
+        const mins = parseInt(input, 10);
+        if (!isNaN(mins) && mins > 0 && mins <= 180) {
+          pomoTimeLeft = mins * 60;
+          document.getElementById('pomoModeText').innerText = isPomoBreak ? `☕ Отдых (${mins}м)` : `🍅 Фокус (${mins}м)`;
+          updatePomodoroDisplay();
+        } else {
+          alert('Пожалуйста, введите корректное число от 1 до 180.');
+        }
+      }
     };
 
     // Run app on load
