@@ -1964,6 +1964,71 @@
       });
     };
 
+    // Track clicked links for AI report
+    let clickedLinks = new Set();
+    try {
+      const saved = localStorage.getItem('tgo_clicked_links');
+      if (saved) clickedLinks = new Set(JSON.parse(saved));
+    } catch(e) {}
+
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (a && a.href && a.target === '_blank') {
+        clickedLinks.add(a.href);
+        try { localStorage.setItem('tgo_clicked_links', JSON.stringify([...clickedLinks])); } catch(err){}
+      }
+    });
+
+    window.downloadAiReport = function() {
+      let report = "# Мой прогресс ТГО (Экспорт для ИИ)\n\n";
+      report += "Здесь перечислены темы, которые я изучил, а также материалы и тренажеры, с которыми я работал.\n\n";
+      report += "## Изученные темы и материалы\n\n";
+      
+      let studied = D.filter(item => completedTopics.has(item.id) || srsState[item.id]);
+      
+      if (studied.length === 0) {
+          report += "Пока нет изученных тем.\n\n";
+      } else {
+          studied.forEach(item => {
+              report += `### Блок: ${item.bn}\n`;
+              report += `**Тема:** ${item.t}\n`;
+              if (completedTopics.has(item.id)) {
+                  report += `- Статус: Выполнено\n`;
+              }
+              if (srsState[item.id]) {
+                  const s = srsState[item.id];
+                  report += `- Интервальное повторение: Интервал ${s.interval} дн., след. повторение ${new Date(s.nextReview).toLocaleDateString('ru-RU')}\n`;
+              }
+              
+              if (item.v && item.v.length > 0) {
+                  report += `\n**Ресурсы (Видео/Статьи):**\n`;
+                  item.v.forEach(v => { 
+                    const visited = clickedLinks.has(v.url) ? ' [ПРОСМОТРЕНО]' : '';
+                    report += `- [${v.title}](${v.url})${visited}\n`; 
+                  });
+              }
+              if (item.p && item.p.length > 0) {
+                  report += `\n**Задачи/Тренажеры:**\n`;
+                  item.p.forEach(p => { 
+                    const visited = clickedLinks.has(p.url) ? ' [РЕШАЛОСЬ]' : '';
+                    report += `- [${p.title}](${p.url})${visited}\n`; 
+                  });
+              }
+              report += `\n---\n\n`;
+          });
+      }
+      
+      const blob = new Blob([report], { type: 'text/markdown;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'tgo_progress_report.md';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    };
+
     function renderGeneralResources(container) {
       container.style.opacity = 0;
       setTimeout(() => {
@@ -2065,6 +2130,22 @@
                   <div class="card-desc" style="color: var(--color-block-1); font-weight: 500;">Нажмите, чтобы скопировать 📋</div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <h3 class="section-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:20px; height:20px; margin-right:8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              Экспорт для ИИ (AI)
+            </h3>
+            <div class="tip-section" style="--topic-accent: var(--color-block-3);">
+              <div class="tip-text" style="font-family: var(--font-sans); margin-bottom: 16px;">
+                Скачайте подробный отчет о вашем прогрессе (какие темы изучены, какие видео просмотрены и какие тренажеры пройдены) в формате Markdown (.md). Отправьте этот файл ChatGPT, Claude или другому ИИ, чтобы он понял ваш текущий уровень и помог составить персональный план.
+              </div>
+              <button onclick="downloadAiReport()" style="background: var(--color-block-3); color: white; border: none; padding: 12px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; font-family: var(--font-sans); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); transition: all 0.2s;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Скачать отчет (.md)
+              </button>
             </div>
           </div>
         `;
